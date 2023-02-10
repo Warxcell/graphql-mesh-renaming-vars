@@ -1,0 +1,15 @@
+type Query {
+    getObjectById(id: ID!): Object2!
+
+    getObjectsByIds(ids: [ID!]!): [Object2!]!
+}
+
+type Object2 {
+    id: ID!
+    anotherRelation: Object3!
+}
+
+type Object3 {
+    id: ID!
+    isActive: Boolean!
+}
